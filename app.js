@@ -52,3 +52,31 @@ const circleOneAr = areaOfCircle(5, 3.14159);
 console.log(circleOneAr)
 const circleTwoAr = areaOfCircle(8.2);
 console.log(circleTwoAr);
+
+// const set = new Set([1,2,3,1,3,4])
+// console.log(set)
+
+// const obj = {
+//     name: 'value of name'
+// }
+
+// const obj1 = new Object();
+// obj1.fn = "Rocky";
+
+// console.log(obj1);
+
+// const map = new Map()
+// map.set('firstName', "Jane")
+
+// console.log(map)
+
+const obj1 = { name: "John", age: 30 };
+const obj2 = { name: "John", age: 30 };
+
+const mySet = new Set();
+
+mySet.add(obj1);
+mySet.add(obj2);
+
+console.log(mySet);
+console.log(mySet.size);
