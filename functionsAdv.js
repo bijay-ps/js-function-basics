@@ -1,79 +1,90 @@
-// Type 2 Function expression
+// // Type 2 Function expression
 
-const xyz = function() {
-    console.log('Hello my name is Rocky')
-}
+// const xyz = function() {
+//     console.log('Hello my name is Rocky')
+// }
 
-xyz();
+// xyz();
 
-const addition = function(num1, num2) {
-    const res = num1 + num2;
-    console.log(res)
-}
+// const addition = function(num1, num2) {
+//     const res = num1 + num2;
+//     console.log(res)
+// }
 
-addition(3,4)
+// addition(3,4)
 
-// Anonymous functions
-const result = (function(a,b) {
-    console.log(a*b)
-    return a*b;
-})(5,6)
+// // Anonymous functions
+// const result = (function(a,b) {
+//     console.log(a*b)
+//     return a*b;
+// })(5,6)
 
-console.log(result);
+// console.log(result);
 
 // Arrow functions
 const division = (i,j) => {
     const rem = i/j;
-    console.log(rem)
+    console.log(rem);
 }
 
 division(246, 4);
 
-const returnOnlyOneVal = i => i*10; // Type of Arrow Function
+const returnOnlyOneVal = i => i*10 // Type of Arrow Function
 
 
-console.log(returnOnlyOneVal(9))
+// console.log(returnOnlyOneVal(9))
 
-// Recursive function: Where function will call itself
-function countdown(val) {
-    // base case: Where the execution should stop
-    if (val === 0) {
-        return;
-    }
+// // Recursive function: Where function will call itself
+// function countdown(val) {
+//     // base case: Where the execution should stop
+//     if (val === 0) {
+//         return;
+//     }
 
-    // recursion call
-    console.log(val);
-    val = val - 1;
-    countdown(val);
-}
+//     // recursion call
+//     console.log(val);
+//     val = val - 1;
+//     countdown(val);
+// }
 
-countdown(5)
+// countdown(5)
 
-// Generator functions
-function* generator(i) {
-    const add2 = i+2;
+// // Generator functions
+// function* generator(i) {
+//     const add2 = i+2;
 
-    yield add2;
-    yield i+10;
-    yield i+20;
-}
+//     yield add2;
+//     yield i+10;
+//     yield i+20;
+// }
 
-const gen = generator(10);
-console.log(gen)
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
+// const gen = generator(10);
+// console.log(gen)
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
 
-function* createIds() {
-    let index = 0;
-    while(true) {
-        index = index + 1;
-        yield index;
-    }
-}
+// function* createIds() {
+//     let index = 0;
+//     while(true) {
+//         index = index + 1;
+//         yield index;
+//     }
+// }
 
-const ids = createIds();
-console.log(ids.next());
-console.log(ids.next())
+// const ids = createIds();
+// console.log(ids.next());
+// console.log(ids.next())
+
+// IIFE - Immediately Invoked Function Expressions
+
+let a = (2+2) //Expression
+console.log(a);
+
+(function(a,b) {
+    let fname = "IIFE";
+    const sum = a + b;
+    console.log(fname, sum);
+})(3,6);

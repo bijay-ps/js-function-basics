@@ -1,20 +1,26 @@
-const name = "Bijay";
-console.log(i);
-let i = 12;
+let name = "Pizza Party";
 
-const first = () => { // This is a function, with the name "first"
-    let num = 11;
-    let b = second(); // the function by name "second" is called
-    console.log(`b: ${b}`)
-    const res = num + b;
-    return res;
+const getPizza = () => {
+    let qty = 2;
+    let seasoningQty = getSeasoning(qty);
+    return {
+        pizza_quantity: qty,
+        seasoning_quantity: seasoningQty
+    };
 }
 
-const second = () => { // This is another function, it's name is "second"
-    let c = 20;
-    return c;
+function getSeasoning(qty) {
+    if(qty === 1) return 1;
+    else if(qty >=2) {
+        return qty + 1;
+    }
 }
 
-const val = first();
+const pizzaOrder = getPizza(); 
 
-console.log(`val: ${val}`)
+console.log(pizzaOrder);
+
+// {
+//     pizza_quantity: qty,
+//     seasoning_quantity: seasoningQty
+// }
