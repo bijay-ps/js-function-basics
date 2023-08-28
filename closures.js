@@ -8,5 +8,5 @@ function add(num) {
     }
 }
 
-const val1 = add(3);
+const val1 = add(3); // Function Expression
 val1()
