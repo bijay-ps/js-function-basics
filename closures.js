@@ -1,12 +1,13 @@
-function add(num) {
-    let numPassed = num; //Variable Declaration
-    return function() { // returning a function
-        const toAdd = 5;
-        console.log('line no. 4:',numPassed);
+function add() {
+    let toAdd = 5;
+    return function(num) { // returning a function
+        console.log('line no. 4:',num);
         console.log('line no. 5:', toAdd);
-        console.log('line no. 6:', numPassed + toAdd)
+        console.log('line no. 6:', num + toAdd)
+        return num+toAdd;
     }
 }
 
-const val1 = add(3); // Function Expression
-val1()
+const result = add(); // Function Expression
+console.log(result(3));
+
